@@ -135,12 +135,15 @@ mark.tbc{background:#FFE08A;color:var(--ink);padding:0 4px;font-family:var(--f-m
 .js .ph img:not(:first-child){cursor:pointer}
 .js .ph img:not(:first-child):hover{opacity:.85}
 .ph.ph-ba{aspect-ratio:3/2;grid-template-rows:repeat(3,minmax(0,1fr))}
+.ph.ph-ba.wide{aspect-ratio:2/1}
 .ph.ph-ba .fba{grid-row:1/4;position:relative;overflow:hidden;min-height:0;min-width:0}
 .fba>img{width:100%;height:100%;object-fit:cover;display:block}
 .js .ph.ph-ba img{cursor:default;opacity:1}
 @media (max-width:760px){
   .ph.ph-ba{aspect-ratio:auto;grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:auto auto;overflow:visible}
   .ph.ph-ba .fba{grid-column:1/-1;grid-row:1;aspect-ratio:1/1}
+  .ph.ph-ba.wide{aspect-ratio:auto}
+  .ph.ph-ba.wide .fba{aspect-ratio:4/3}
   .ph.ph-ba>img{grid-row:2;aspect-ratio:3/2;max-height:none}
 }
 .pbody{padding:var(--s4) 0 0;display:flex;flex-direction:column;gap:var(--s3);position:relative}
@@ -270,13 +273,13 @@ mark.tbc{background:#FFE08A;color:var(--ink);padding:0 4px;font-family:var(--f-m
       <div class="layer pair" data-ch="2"><img src="img/tithe-stair-before.jpg" alt="" loading="lazy"><img src="img/tithe-stair-after.jpg" alt="" loading="lazy"><span class="lab l">Before</span><span class="lab m">After</span><span class="cap">Tithe Barn · the staircase</span></div>
       <div class="layer" data-ch="2"><img src="img/tithe-site.jpg" alt="" loading="lazy"><span class="cap">Tithe Barn · stripped back to stone</span></div>
       <div class="layer pair" data-ch="2"><img src="img/tithe-bedroom.jpg" alt="" loading="lazy"><img src="img/tithe-exterior.jpg" alt="" loading="lazy"><span class="cap">Tithe Barn Hotel, Cockermouth</span></div>
-      <div class="layer ba" data-ch="3"><img src="img/selkirk49-1.jpg" alt=""><div class="before"><div class="hatch">Before photo to come</div></div><span class="lab l">Before</span><span class="lab r">After</span><div class="bar"></div><input type="range" min="0" max="100" value="38" aria-label="Before and after, 49 Selkirk Road"><span class="cap">49 Selkirk Road · house to four flats</span></div>
+      <div class="layer" data-ch="3"><img src="img/selkirk49-0.jpg" alt="" loading="lazy"><span class="cap">49 Selkirk Road</span></div>
       <div class="layer" data-ch="3"><img src="img/smallwood-0.jpg" alt="" loading="lazy"><span class="cap">15 Smallwood Road</span></div>
       <div class="layer" data-ch="3"><img src="img/mitcham-0.jpg" alt="" loading="lazy"><span class="cap">162 Mitcham Road</span></div>
       <div class="layer" data-ch="3"><img src="img/selkirk58-0.jpg" alt="" loading="lazy"><span class="cap">58 Selkirk Road</span></div>
       <div class="layer ba" data-ch="4" style="--p:50%"><img src="img/aldrington-after.jpg" alt="" loading="lazy"><div class="before"><img src="img/aldrington-before.jpg" alt="" loading="lazy"></div><span class="lab l">Before</span><span class="lab r">After</span><div class="bar"></div><input type="range" min="0" max="100" value="50" aria-label="Before and after, 4 Aldrington Road"><span class="cap">4 Aldrington Road</span></div>
       <div class="layer" data-ch="4"><img src="img/trinity-0.jpg" alt="" loading="lazy"><span class="cap">28 Trinity Road</span></div>
-      <div class="layer" data-ch="5"><img src="img/deburgh-0.jpg" alt="" loading="lazy"><span class="cap">1 Deburgh Road</span></div>
+      <div class="layer ba" data-ch="5" style="--p:50%"><img src="img/deburgh-0.jpg" alt="" loading="lazy"><div class="before"><img src="img/deburgh-before.jpg" alt="" loading="lazy"></div><span class="lab l">Before</span><span class="lab r">After</span><div class="bar"></div><input type="range" min="0" max="100" value="50" aria-label="Before and after, 1 Deburgh Road"><span class="cap">1 Deburgh Road</span></div>
       <div class="layer" data-ch="5"><img src="img/lrr-0.jpg" alt="" loading="lazy"><span class="cap">129 Lower Richmond Road</span></div>
     </div>
     <div class="chapters">
@@ -345,7 +348,7 @@ mark.tbc{background:#FFE08A;color:var(--ink);padding:0 4px;font-family:var(--f-m
   </div>
   <div class="feats">
     <article class="proj rv">
-      <div class="ph ph4"><img src="img/deburgh-0.jpg" alt="1 Deburgh Road, corner block and street"><img src="img/deburgh-1.jpg" alt="1 Deburgh Road, open-plan living"><img src="img/deburgh-2.jpg" alt="1 Deburgh Road, kitchen"><img src="img/deburgh-3.jpg" alt="1 Deburgh Road, bedroom"></div>
+      <div class="ph ph-ba wide"><div class="ba fba" style="--p:50%"><img src="img/deburgh-0.jpg" alt="1 Deburgh Road, corner block and street"><div class="before"><img src="img/deburgh-before.jpg" alt="1 Deburgh Road, the street before development"></div><span class="lab l">Before</span><span class="lab r">After</span><div class="bar"></div><input type="range" min="0" max="100" value="50" aria-label="Before and after, 1 Deburgh Road"><span class="cap">Drag to compare</span></div><img src="img/deburgh-1.jpg" alt="1 Deburgh Road, open-plan living"><img src="img/deburgh-2.jpg" alt="1 Deburgh Road, kitchen"><img src="img/deburgh-3.jpg" alt="1 Deburgh Road, bedroom"></div>
       <div class="pbody">
         <div class="ptitle"><h3><span class="fno">01</span>1 Deburgh Road</h3><span class="tag">New build · in-house construction</span></div>
         <p class="pwhy">Our largest scheme, and the first we built ourselves. Nutbrook was developer and main contractor, with our own foreman, project manager and site labour.</p>
