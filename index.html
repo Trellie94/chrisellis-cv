@@ -95,8 +95,10 @@ mark.tbc{background:#FFE08A;color:var(--ink);padding:0 4px;font-family:var(--f-m
 .ba .bar{position:absolute;top:0;bottom:0;left:var(--p);width:2px;margin-left:-1px;background:var(--sheet);box-shadow:0 0 0 1px rgba(22,25,31,.35)}
 .ba .bar::after{content:"◂ ▸";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:var(--sheet);color:var(--accent);font:500 12px var(--f-mono);padding:6px 8px;border-radius:999px;white-space:nowrap;box-shadow:0 0 0 1px rgba(22,25,31,.35)}
 .ba input{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:ew-resize;touch-action:pan-y}
-.ba .lab{position:absolute;top:0;font:500 11px var(--f-mono);letter-spacing:.08em;text-transform:uppercase;padding:5px 9px;background:var(--sheet);color:var(--ink)}
+.layer .lab{position:absolute;top:0;font:500 11px var(--f-mono);letter-spacing:.08em;text-transform:uppercase;padding:5px 9px;background:var(--sheet);color:var(--ink)}
 .ba .lab.l{left:0}.ba .lab.r{right:0}
+.layer.pair{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:4px;background:var(--sheet)}
+.pair .lab.m{left:calc(50% + 2px)}
 .chapters{display:flex;flex-direction:column}
 .ch{min-height:74vh;display:flex;flex-direction:column;justify-content:center;gap:var(--s3);padding-block:var(--s5)}
 .ch .k{font:500 12px var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
@@ -253,17 +255,20 @@ mark.tbc{background:#FFE08A;color:var(--ink);padding:0 4px;font-family:var(--f-m
   </div>
   <div class="story">
     <div class="stage" aria-hidden="true">
-      <span class="stage-n" id="stage-n">01 / 05</span>
+      <span class="stage-n" id="stage-n">01 / 06</span>
       <div class="layer ba on" data-ch="0" style="--p:50%"><img src="img/firle-after.jpg" alt=""><div class="before"><img src="img/firle-before.jpg" alt=""></div><span class="lab l">Before</span><span class="lab r">After</span><div class="bar"></div><input type="range" min="0" max="100" value="50" aria-label="Before and after, 8 Firle Place"><span class="cap">8 Firle Place · the first flat</span></div>
-      <div class="layer" data-ch="1"><div class="hatch">Photos to come<br>Client refurbishments, Tithe Barn Hotel</div></div>
-      <div class="layer ba" data-ch="2"><img src="img/selkirk49-1.jpg" alt=""><div class="before"><div class="hatch">Before photo to come</div></div><span class="lab l">Before</span><span class="lab r">After</span><div class="bar"></div><input type="range" min="0" max="100" value="38" aria-label="Before and after, 49 Selkirk Road"><span class="cap">49 Selkirk Road · house to four flats</span></div>
-      <div class="layer" data-ch="2"><img src="img/smallwood-0.jpg" alt="" loading="lazy"><span class="cap">15 Smallwood Road</span></div>
-      <div class="layer" data-ch="2"><img src="img/mitcham-0.jpg" alt="" loading="lazy"><span class="cap">162 Mitcham Road</span></div>
-      <div class="layer" data-ch="2"><img src="img/selkirk58-0.jpg" alt="" loading="lazy"><span class="cap">58 Selkirk Road</span></div>
-      <div class="layer" data-ch="3"><img src="img/trinity-0.jpg" alt="" loading="lazy"><span class="cap">28 Trinity Road</span></div>
-      <div class="layer ba" data-ch="3"><img src="img/aldrington-1.jpg" alt="" loading="lazy"><div class="before"><div class="hatch">Before photo to come</div></div><span class="lab l">Before</span><span class="lab r">After</span><div class="bar"></div><input type="range" min="0" max="100" value="38" aria-label="Before and after, 4 Aldrington Road"><span class="cap">4 Aldrington Road · house to seven flats</span></div>
-      <div class="layer" data-ch="4"><img src="img/deburgh-0.jpg" alt="" loading="lazy"><span class="cap">1 Deburgh Road</span></div>
-      <div class="layer" data-ch="4"><img src="img/lrr-0.jpg" alt="" loading="lazy"><span class="cap">129 Lower Richmond Road</span></div>
+      <div class="layer" data-ch="1"><div class="hatch">Photos to come<br>Radipole Road, Hydethorpe Road</div></div>
+      <div class="layer pair" data-ch="2"><img src="img/tithe-stair-before.jpg" alt="" loading="lazy"><img src="img/tithe-stair-after.jpg" alt="" loading="lazy"><span class="lab l">Before</span><span class="lab m">After</span><span class="cap">Tithe Barn · the staircase</span></div>
+      <div class="layer" data-ch="2"><img src="img/tithe-site.jpg" alt="" loading="lazy"><span class="cap">Tithe Barn · stripped back to stone</span></div>
+      <div class="layer pair" data-ch="2"><img src="img/tithe-bedroom.jpg" alt="" loading="lazy"><img src="img/tithe-exterior.jpg" alt="" loading="lazy"><span class="cap">Tithe Barn Hotel, Cockermouth</span></div>
+      <div class="layer ba" data-ch="3"><img src="img/selkirk49-1.jpg" alt=""><div class="before"><div class="hatch">Before photo to come</div></div><span class="lab l">Before</span><span class="lab r">After</span><div class="bar"></div><input type="range" min="0" max="100" value="38" aria-label="Before and after, 49 Selkirk Road"><span class="cap">49 Selkirk Road · house to four flats</span></div>
+      <div class="layer" data-ch="3"><img src="img/smallwood-0.jpg" alt="" loading="lazy"><span class="cap">15 Smallwood Road</span></div>
+      <div class="layer" data-ch="3"><img src="img/mitcham-0.jpg" alt="" loading="lazy"><span class="cap">162 Mitcham Road</span></div>
+      <div class="layer" data-ch="3"><img src="img/selkirk58-0.jpg" alt="" loading="lazy"><span class="cap">58 Selkirk Road</span></div>
+      <div class="layer" data-ch="4"><img src="img/trinity-0.jpg" alt="" loading="lazy"><span class="cap">28 Trinity Road</span></div>
+      <div class="layer ba" data-ch="4"><img src="img/aldrington-1.jpg" alt="" loading="lazy"><div class="before"><div class="hatch">Before photo to come</div></div><span class="lab l">Before</span><span class="lab r">After</span><div class="bar"></div><input type="range" min="0" max="100" value="38" aria-label="Before and after, 4 Aldrington Road"><span class="cap">4 Aldrington Road · house to seven flats</span></div>
+      <div class="layer" data-ch="5"><img src="img/deburgh-0.jpg" alt="" loading="lazy"><span class="cap">1 Deburgh Road</span></div>
+      <div class="layer" data-ch="5"><img src="img/lrr-0.jpg" alt="" loading="lazy"><span class="cap">129 Lower Richmond Road</span></div>
     </div>
     <div class="chapters">
       <article class="ch on">
@@ -276,25 +281,31 @@ mark.tbc{background:#FFE08A;color:var(--ink);padding:0 4px;font-family:var(--f-m
         <span class="k">02 · Builder for hire</span>
         <h3>Running other people's builds</h3>
         <p>With my co-founder Mark Baracas, I ran Nutbrook as a small construction business: freelance project management and white-label contracting on refurbishments, extensions and loft conversions.</p>
-        <p>In the same years my brothers and I turned a derelict pub into a boutique hotel in Cockermouth and invested in country pubs in Cumbria.</p>
         <p class="list">Radipole Road · Weiss Road · Hydethorpe Road · Ebner Road · Cedars Road</p>
       </article>
       <article class="ch">
-        <span class="k">03 · Developing with a partner</span>
+        <span class="k">03 · A derelict pub</span>
+        <h3>Nine hotel rooms and a basement bar</h3>
+        <p>With my brothers again, in Cumbria. We bought the Tithe Barn in Cockermouth as a derelict pub, stripped it back to the stone and rebuilt it as a 9-room boutique hotel with a basement bar.</p>
+        <p class="proof">We kept the original staircase and the stained glass, and rebuilt around them.</p>
+        <p class="list">Also in Cumbria · Old Mill Inn, Maryport · Highland Drove · Cross Keys</p>
+      </article>
+      <article class="ch">
+        <span class="k">04 · Developing with a partner</span>
         <h3>Four developments alongside a developer ten years ahead of us</h3>
         <p>Nutbrook then moved into development. Mark and I did our first four schemes as a joint venture with Handy Heroes, who had ten years of development experience.</p>
         <p class="proof">20 units across four developments, three of them with basement excavations.</p>
         <p class="list">49 Selkirk Road · 15 Smallwood Road · 162 Mitcham Road · 58 Selkirk Road</p>
       </article>
       <article class="ch">
-        <span class="k">04 · On our own</span>
+        <span class="k">05 · On our own</span>
         <h3>Finding the sites, raising the finance, delivering the flats</h3>
         <p>The next four developments were Nutbrook's alone. We found the sites, raised the finance and delivered them without a partner.</p>
         <p class="proof">23 flats delivered as our own developer. £6.8m of private investment into Nutbrook, all of it returned.</p>
         <p class="list">28 Trinity Road · 4 Aldrington Road · 1 Deburgh Road · 129 Lower Richmond Road</p>
       </article>
       <article class="ch">
-        <span class="k">05 · Our own construction team</span>
+        <span class="k">06 · Our own construction team</span>
         <h3>Developer and contractor on the same scheme</h3>
         <p>For the last two developments I built an in-house construction team. I hired a foreman and a project manager, and we ran everything ourselves, from procurement to site labour.</p>
         <p class="proof">12 flats and over £2.5m of development cost, excluding land, delivered under Nutbrook Construction.</p>
