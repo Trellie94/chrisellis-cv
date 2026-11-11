@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
-<meta name="description" content="Co-founder and Head of Development, Nutbrook Property. 22 UK projects worth £33.6m GDV, 2019–2026, plus a four-unit scheme in Newlands, Cape Town.">
+<meta name="description" content="Co-founder and Head of Development, Nutbrook Property. From one studio flat to 43 flats across eight London developments, plus four homes in Newlands, Cape Town.">
 <meta property="og:type" content="profile">
 <meta property="og:title" content="Chris Ellis – Residential Development">
-<meta property="og:description" content="Co-founder and Head of Development, Nutbrook Property. 22 UK projects worth £33.6m GDV, 2019–2026, plus a four-unit scheme in Newlands, Cape Town.">
+<meta property="og:description" content="Co-founder and Head of Development, Nutbrook Property. From one studio flat to 43 flats across eight London developments, plus four homes in Newlands, Cape Town.">
 <meta property="og:url" content="https://www.chrisellis.io/">
 <meta property="og:image" content="https://www.chrisellis.io/img/deburgh-0.jpg">
 <meta name="twitter:card" content="summary_large_image">
@@ -17,8 +17,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<script>document.documentElement.classList.add('js')</script>
 <style>
-/* Layout: architect's-practice sheet on warm stone; projects sit open on the page, separated by hairlines, each with a drawing title block. Light only. */
+/* Layout: architect's-practice sheet on warm stone. Light only. */
 :root{
   --paper:#F1EEE8; --sheet:#FAF8F4; --ink:#16191F; --muted:#5D6068; --rule:#D5D0C6; --accent:#1F3A60; --accent-soft:#E1E6EE;
   color-scheme:light;
@@ -26,25 +27,30 @@
   --f-body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
   --f-mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
   --s1:4px;--s2:8px;--s3:12px;--s4:16px;--s5:24px;--s6:32px;--s7:48px;--s8:72px;
+  --gut:max(16px,env(safe-area-inset-left,0px));
+  padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)
 }
-
-body{background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.55;
-  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));-webkit-font-smoothing:antialiased}
+[hidden]{display:none!important}
+img{max-width:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.55;
+  padding-left:var(--gut);padding-right:max(16px,env(safe-area-inset-right,0px));-webkit-font-smoothing:antialiased}
 .wrap{max-width:1040px;margin:0 auto;padding-block:var(--s7) var(--s8);display:flex;flex-direction:column;gap:var(--s8)}
 h1,h2,h3{font-family:var(--f-display);text-wrap:balance;margin:0}
 p{margin:0}
-.mono{font-family:var(--f-mono)}
 .eyebrow{font-family:var(--f-mono);font-size:15px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
 a{color:var(--accent)}
+button{font-family:inherit}
 :focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+mark.tbc{background:#FFE08A;color:var(--ink);padding:0 4px;font-family:var(--f-mono);font-size:.85em}
 
 /* Header */
 .head{display:grid;grid-template-columns:auto 1fr auto;gap:var(--s5);align-items:center}
 .portrait{width:112px;height:112px;border-radius:50%;object-fit:cover;filter:grayscale(1)}
 .head h1{font-size:clamp(36px,7vw,58px);font-weight:600;letter-spacing:-.015em;line-height:1}
 .role{font-family:var(--f-display);font-weight:500;font-size:clamp(17px,2.6vw,21px);color:var(--accent);margin-top:var(--s2)}
-.lede{grid-column:1/-1;font-size:clamp(18px,2.4vw,21px);line-height:1.5;max-width:40ch}
-.lede-sub{grid-column:1/-1;color:var(--muted);max-width:62ch}
+.lede{grid-column:1/-1;font-family:var(--f-display);font-weight:500;font-size:clamp(26px,4.6vw,42px);line-height:1.15;letter-spacing:-.01em;max-width:24ch;text-wrap:balance;margin-top:var(--s4)}
+.lede em{font-style:normal;color:var(--accent)}
+.lede-sub{grid-column:1/-1;color:var(--muted);max-width:62ch;font-size:17px}
 .contact{display:flex;flex-wrap:wrap;gap:var(--s2) var(--s3)}
 .head .contact{grid-column:3;grid-row:1;align-self:start;flex-direction:column;align-items:flex-end;gap:var(--s2)}
 .head .chip{font-size:12px;padding:4px 4px 4px 11px}
@@ -59,7 +65,6 @@ a{color:var(--accent)}
 .chip button:hover{background:var(--accent);color:var(--sheet)}
 
 /* Figures */
-.figs-h{text-align:center;margin-bottom:var(--s3)}
 .figs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:2px solid var(--ink);border-bottom:1px solid var(--rule)}
 .fig{padding:var(--s4) var(--s3) var(--s4) 0;display:flex;flex-direction:column;gap:var(--s1)}
 .fig+.fig{padding-left:var(--s3);border-left:1px solid var(--rule)}
@@ -70,56 +75,98 @@ a{color:var(--accent)}
 /* Section heads */
 .sec{display:flex;flex-direction:column;gap:var(--s5)}
 .sec-h{display:flex;flex-direction:column;gap:var(--s2)}
-.sec-h h2{font-size:clamp(24px,4vw,32px);font-weight:600;}
+.sec-h h2{font-size:clamp(24px,4vw,32px);font-weight:600}
 .sec-h p{color:var(--muted);max-width:62ch}
+.sec-row{display:flex;justify-content:space-between;align-items:flex-end;gap:var(--s4)}
 
-/* Process */
-.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:var(--s3);counter-reset:st}
-.steps li{counter-increment:st;display:flex;flex-direction:column;gap:var(--s2);padding-top:var(--s3);border-top:2px solid var(--accent);min-width:0}
-.steps li::before{content:"Stage " counter(st);font:500 12px var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
-.steps h3{font-size:18px;font-weight:600;}
-.steps p{font-size:14.5px;color:var(--muted);line-height:1.5}
+/* Story: pinned photo, chapters scroll past */
+.story{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:var(--s7);align-items:start}
+.stage{position:sticky;top:max(24px,calc(50vh - 240px));aspect-ratio:4/3;overflow:hidden;background:var(--sheet);border-top:2px solid var(--ink)}
+.layer{position:absolute;inset:0;opacity:0;pointer-events:none}
+.layer.on{opacity:1;pointer-events:auto}
+.layer>img{width:100%;height:100%;object-fit:cover;display:block}
+.layer .cap{position:absolute;left:0;bottom:0;background:var(--ink);color:var(--sheet);font:500 11px var(--f-mono);letter-spacing:.08em;text-transform:uppercase;padding:5px 9px}
+.hatch{position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:var(--s5);background:repeating-linear-gradient(135deg,var(--paper) 0 10px,var(--sheet) 10px 20px);color:var(--muted);font:500 13px var(--f-mono)}
+.stage-n{position:absolute;right:0;bottom:0;z-index:3;background:var(--sheet);font:500 12px var(--f-mono);letter-spacing:.08em;padding:5px 9px;color:var(--accent)}
+/* before/after slider */
+.ba{--p:38%}
+.ba .before{position:absolute;inset:0;clip-path:inset(0 calc(100% - var(--p)) 0 0)}
+.ba .before img{width:100%;height:100%;object-fit:cover;display:block}
+.ba .bar{position:absolute;top:0;bottom:0;left:var(--p);width:2px;margin-left:-1px;background:var(--sheet);box-shadow:0 0 0 1px rgba(22,25,31,.35)}
+.ba .bar::after{content:"◂ ▸";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:var(--sheet);color:var(--accent);font:500 12px var(--f-mono);padding:6px 8px;border-radius:999px;white-space:nowrap;box-shadow:0 0 0 1px rgba(22,25,31,.35)}
+.ba input{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:ew-resize;touch-action:pan-y}
+.ba .lab{position:absolute;top:0;font:500 11px var(--f-mono);letter-spacing:.08em;text-transform:uppercase;padding:5px 9px;background:var(--sheet);color:var(--ink)}
+.ba .lab.l{left:0}.ba .lab.r{right:0}
+.chapters{display:flex;flex-direction:column}
+.ch{min-height:74vh;display:flex;flex-direction:column;justify-content:center;gap:var(--s3);padding-block:var(--s5)}
+.ch .k{font:500 12px var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.ch h3{font-size:clamp(24px,3.4vw,30px);font-weight:600;line-height:1.15}
+.ch p{max-width:46ch}
+.ch .proof{font-family:var(--f-display);font-weight:500;font-size:20px;border-left:2px solid var(--accent);padding-left:var(--s4);margin-top:var(--s2)}
+.ch .list{font:400 13px var(--f-mono);color:var(--muted)}
+.js .ch{opacity:.3}
+.js .ch.on{opacity:1}
+@media (max-width:760px){
+  .story{grid-template-columns:1fr;gap:0}
+  .stage{top:0;z-index:5;aspect-ratio:3/2;margin-inline:calc(-1*var(--gut)) -16px;box-shadow:0 10px 16px -12px rgba(22,25,31,.45)}
+  .ch{min-height:62vh;justify-content:flex-start;padding-block:var(--s6)}
+}
+
+/* What you get */
+.gets{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--s6) var(--s6)}
+.get{border-top:2px solid var(--accent);padding-top:var(--s3);display:flex;flex-direction:column;gap:var(--s2);min-width:0}
+.get .big{font-family:var(--f-display);font-weight:500;font-size:clamp(28px,4.4vw,40px);line-height:1.05;color:var(--accent);font-variant-numeric:tabular-nums}
+.get .big small{display:block;font:500 12px var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:6px}
+.get h3{font-size:20px;font-weight:600;margin-top:var(--s2)}
+.get p{font-size:15px;color:var(--muted)}
 .split{font-size:15px;color:var(--muted);border-left:2px solid var(--rule);padding-left:var(--s4);max-width:66ch}
-@media (max-width:900px){.steps{grid-template-columns:repeat(2,minmax(0,1fr))}.steps li:last-child{grid-column:1/-1}}
-@media (max-width:520px){.steps{grid-template-columns:1fr}}
+@media (max-width:640px){.gets{grid-template-columns:1fr}}
 
 /* Projects */
-.projects{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:var(--s7) var(--s6)}
+.feats{display:flex;flex-direction:column;gap:var(--s7)}
 .proj{display:flex;flex-direction:column;min-width:0;border-top:1px solid var(--ink);padding-top:var(--s4)}
-.proj{grid-column:span 3}
-.proj.lead{grid-column:1/-1}
-.proj.third{grid-column:span 2}
-.proj.third .ptitle h3{font-size:19px}
-.proj.third .tb{grid-template-columns:repeat(2,minmax(0,1fr))}
-.proj.third .tb div:nth-child(3){border-left:0}
-.proj.third .tb div:nth-child(n+3){border-top:1px solid var(--accent)}
-.ph{display:grid;grid-template-columns:2fr 1fr;grid-template-rows:1fr 1fr;gap:4px;aspect-ratio:3/2;max-width:100%}
-.proj.lead .ph{aspect-ratio:2/1}
-.ph img{width:100%;height:100%;object-fit:cover;display:block;min-height:0}
+.ph{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr);grid-template-rows:repeat(2,minmax(0,1fr));gap:4px;aspect-ratio:2/1;max-width:100%;overflow:hidden}
+.ph img{width:100%;height:100%;object-fit:cover;display:block;min-width:0;min-height:0;max-height:100%}
 .ph img:first-child{grid-row:1/3}
-.ph.ph4{grid-template-rows:repeat(3,1fr)}
+.ph.ph4{grid-template-rows:repeat(3,minmax(0,1fr))}
 .ph.ph4 img:first-child{grid-row:1/4}
-.ph.ph-draw img{object-fit:contain;background:#fff}
-.ph-empty{aspect-ratio:3/2;display:grid;place-items:center;background:repeating-linear-gradient(135deg,var(--paper) 0 10px,var(--sheet) 10px 20px);color:var(--muted);font:500 13px var(--f-mono);text-align:center;padding:var(--s4)}
-.pbody{padding:var(--s4) 0 0;display:flex;flex-direction:column;gap:var(--s3)}
+.js .ph img:not(:first-child){cursor:pointer}
+.js .ph img:not(:first-child):hover{opacity:.85}
+.pbody{padding:var(--s4) 0 0;display:flex;flex-direction:column;gap:var(--s3);position:relative}
 .ptitle{display:flex;justify-content:space-between;align-items:baseline;gap:var(--s3);flex-wrap:wrap}
-.ptitle h3{font-size:22px;font-weight:600;}
-.proj.lead .ptitle h3{font-size:clamp(22px,3.4vw,28px)}
+.ptitle h3{font-size:clamp(22px,3.4vw,28px);font-weight:600}
+.fno{font:500 12px var(--f-mono);letter-spacing:.08em;color:var(--muted);margin-right:var(--s2)}
 .tag{font:500 11px var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--accent);border:1px solid var(--accent);padding:2px 7px;white-space:nowrap}
 .pdesc{color:var(--muted);font-size:15px;max-width:62ch}
-.note{font:400 12px var(--f-mono);color:var(--muted)}
-/* drawing title block */
-.tb{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border:1px solid var(--accent);margin-top:var(--s1);background:var(--sheet)}
+.pwhy{max-width:62ch}
+.tb{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border:1px solid var(--accent);margin:var(--s1) 0 0;background:var(--sheet)}
 .tb div{padding:6px 8px;display:flex;flex-direction:column;gap:2px;min-width:0}
 .tb div+div{border-left:1px solid var(--accent)}
 .tb dt{font:500 10px var(--f-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
 .tb dd{margin:0;font:500 14px var(--f-mono);font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
-@media (max-width:760px){.projects{grid-template-columns:1fr}.proj,.proj.third{grid-column:auto}.proj.lead .ph{aspect-ratio:3/2}}
+@media (max-width:760px){.ph{aspect-ratio:3/2}}
 @media (max-width:420px){.tb{grid-template-columns:repeat(2,minmax(0,1fr))}.tb div:nth-child(3){border-left:0}.tb div:nth-child(n+3){border-top:1px solid var(--accent)}}
 
+/* Carousel */
+.car{display:flex;gap:var(--s5);overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-left:var(--gut);margin-inline:calc(-1*var(--gut)) -16px;padding:0 16px var(--s4) var(--gut);scrollbar-width:thin;scrollbar-color:var(--rule) transparent}
+.card{flex:0 0 min(80vw,380px);scroll-snap-align:start;display:flex;flex-direction:column;border-top:1px solid var(--ink);padding-top:var(--s3);min-width:0}
+.card>img{width:100%;aspect-ratio:3/2;object-fit:cover;display:block}
+.card .ptitle h3{font-size:19px}
+.card .tb{grid-template-columns:repeat(2,minmax(0,1fr))}
+.card .tb div:nth-child(3){border-left:0}
+.card .tb div:nth-child(n+3){border-top:1px solid var(--accent)}
+.car-nav{display:none;gap:var(--s2);flex:none}
+.js .car-nav{display:flex}
+.nbtn{width:40px;height:40px;border-radius:50%;border:1px solid var(--accent);background:var(--sheet);color:var(--accent);font-size:18px;line-height:1;cursor:pointer}
+.nbtn:hover{background:var(--accent);color:var(--sheet)}
+.nbtn:disabled{opacity:.3;cursor:default;background:var(--sheet);color:var(--accent)}
+
 /* Track record */
-.rec{display:flex;flex-direction:column;border-top:2px solid var(--ink)}
-.rec{margin-inline:clamp(0px,6vw,72px)}
+.filters{display:none;flex-wrap:wrap;gap:var(--s2);margin-inline:clamp(0px,6vw,72px)}
+.js .filters{display:flex}
+.fbtn{font:500 12px var(--f-mono);letter-spacing:.04em;text-transform:uppercase;border:1px solid var(--rule);background:var(--sheet);color:var(--ink);border-radius:999px;padding:6px 12px;cursor:pointer}
+.fbtn[aria-pressed=true]{background:var(--accent);border-color:var(--accent);color:var(--sheet)}
+.rec{display:flex;flex-direction:column;border-top:2px solid var(--ink);margin-inline:clamp(0px,6vw,72px)}
 .row{display:grid;grid-template-columns:2.2rem 3fr 1fr 1.1fr 1fr;gap:var(--s3);padding:var(--s3) 0;border-bottom:1px solid var(--rule);align-items:baseline}
 .row .no{font-family:var(--f-mono);font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
 .row>*{min-width:0}
@@ -132,8 +179,12 @@ a{color:var(--accent)}
 .row:not(.hd) .gdv{font-weight:600;font-size:15.5px;color:var(--accent)}
 .row.hd .gdv{color:var(--accent)}
 .row.tot{border-bottom:0;border-top:1px solid var(--ink);font-weight:600}
+.js .rec:not(.open):not(.filtered) .row.more{display:none}
+.more-btn{display:none;align-self:center;font:500 13px var(--f-mono);letter-spacing:.04em;text-transform:uppercase;border:1px solid var(--accent);background:var(--sheet);color:var(--accent);border-radius:999px;padding:10px 18px;cursor:pointer}
+.js .more-btn{display:inline-block}
+.more-btn:hover{background:var(--accent);color:var(--sheet)}
 @media (max-width:640px){
-  .rec{margin-inline:0}
+  .rec,.filters{margin-inline:0}
   .row.hd{display:none}
   .row{grid-template-columns:1.8rem 1fr auto;row-gap:2px;column-gap:var(--s2)}
   .row .no{grid-column:1;grid-row:1}
@@ -150,21 +201,23 @@ a{color:var(--accent)}
 .edu div{display:flex;flex-direction:column;gap:2px;min-width:0}
 .edu b{font-weight:600}
 .edu span{color:var(--muted);font-size:15px}
-@media (max-width:520px){.edu{grid-template-columns:1fr}}
+@media (max-width:520px){.edu{grid-template-columns:1fr}.portrait{width:80px;height:80px}.head{gap:var(--s4)}}
 
 /* Footer */
 .foot{display:flex;flex-direction:column;gap:var(--s4);border-top:2px solid var(--ink);padding-top:var(--s5)}
-.foot h2{font-size:clamp(24px,4vw,32px);font-weight:600;}
+.foot h2{font-size:clamp(24px,4vw,32px);font-weight:600}
 .small{font-size:13px;color:var(--muted)}
-@media (max-width:520px){.portrait{width:80px;height:80px}.head{gap:var(--s4)}}
-@media (prefers-reduced-motion:no-preference){.chip button{transition:background .15s,color .15s}}
-/* Safari: stop photo grids growing to the images' natural height */
-.ph{grid-template-columns:minmax(0,2fr) minmax(0,1fr);grid-template-rows:repeat(2,minmax(0,1fr));overflow:hidden}
-.ph.ph4{grid-template-rows:repeat(3,minmax(0,1fr))}
-.ph img{min-width:0;min-height:0;max-height:100%}
-.pbody{position:relative}
+
+/* Motion */
+@media (prefers-reduced-motion:no-preference){
+  .chip button,.nbtn,.fbtn,.more-btn{transition:background .15s,color .15s}
+  .layer{transition:opacity .6s ease}
+  .js .ch{transition:opacity .4s ease}
+  .js .rv{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+  .js .rv.in{opacity:1;transform:none}
+  .car{scroll-behavior:smooth}
+}
 </style>
-<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
 </head>
 <body>
 <div class="wrap">
@@ -176,162 +229,189 @@ a{color:var(--accent)}
     <p class="role">Co-Founder and Head of Development – Nutbrook Property</p>
   </div>
   <div class="contact">
-    <span class="chip"><a href="mailto:chris@nutbrookproperty.com" id="em">chris@nutbrookproperty.com</a><button type="button" data-copy="chris@nutbrookproperty.com">Copy</button></span>
-    <span class="chip"><a href="tel:+27609271955" id="ph">+27 60 927 1955</a><button type="button" data-copy="+27609271955">Copy</button></span>
+    <span class="chip"><a href="mailto:chris@nutbrookproperty.com">chris@nutbrookproperty.com</a><button type="button" data-copy="chris@nutbrookproperty.com">Copy</button></span>
+    <span class="chip"><a href="tel:+27609271955">+27 60 927 1955</a><button type="button" data-copy="+27609271955">Copy</button></span>
     <a class="chip chip-link" href="https://www.nutbrookproperty.com" target="_blank" rel="noopener">www.nutbrookproperty.com ↗</a>
     <span class="pmeta">Age: 32 · Single</span>
   </div>
-  <p class="lede">A proven track record leading my own residential developments from planning consent to sold homes: design, procurement, construction and handover.</p>
-  <p class="lede-sub">Co-founder and Head of Development at Nutbrook Property, my own development business in London, UK (2019–2026). 22 UK projects worth £33.6m GDV in 7 years, plus a four-unit townhouse scheme in Newlands, Cape Town.</p>
+  <p class="lede">I started with one studio flat. Seven years later we were building <em>our own blocks of flats with our own construction team.</em></p>
+  <p class="lede-sub">I co-founded Nutbrook Property in London and ran its developments from 2019 to 2026: 43 flats across eight London developments, four homes in Newlands, Cape Town, and £33.6m of UK projects in total.</p>
 </header>
 
-<section aria-labelledby="h-figs">
-<p class="eyebrow figs-h" id="h-figs">Nutbrook Development Track Record Headline Figures</p>
+<section aria-label="Headline figures">
 <div class="figs">
   <div class="fig"><b>£33.6m</b><span>GDV across 22 UK projects, 2019–2026</span></div>
-  <div class="fig"><b>£23.1m</b><span>GDV across 8 lead London schemes</span></div>
-  <div class="fig"><b>47</b><span>Homes and units in the 9 schemes below</span></div>
+  <div class="fig"><b>43</b><span>Flats and units across 8 London developments</span></div>
+  <div class="fig"><b>£2.5m+</b><span>Build cost delivered by our own in-house construction team</span></div>
 </div>
 </section>
 
-<section class="sec" aria-labelledby="h-role">
+<section class="sec" aria-labelledby="h-story">
   <div class="sec-h">
-    <span class="eyebrow">My role</span>
-    <h2 id="h-role">From planning drawings to a staged show flat</h2>
-    <p>On every Nutbrook development scheme I ran the project once planning was in hand, through to practical completion and sales staging.</p>
+    <span class="eyebrow">The Nutbrook story</span>
+    <h2 id="h-story">From a studio flat to ground-up developments</h2>
   </div>
-  <ol class="steps">
-    <li><h3>Design</h3><p>Value-engineered the planning layouts for design and buildability. Appointed and managed architects, structural, energy and HVAC engineers and interior designers to a full detailed design pack.</p></li>
-    <li><h3>Procure</h3><p>Ran the main-contractor tender and appointment. Let selected packages direct to subcontractors.</p></li>
-    <li><h3>Build</h3><p>Managed the main contractor through construction. Discharged planning conditions with the architects and led Building Control inspections.</p></li>
-    <li><h3>Fund</h3><p>Prepared senior-lender drawdowns with supporting evidence and hosted the monitoring QS. Made all contractor and staff payments.</p></li>
-    <li><h3>Complete</h3><p>Took the interior spec in-house, drew lighting and electrical layouts, ordered all second-fix and furnished the homes for sale.</p></li>
-  </ol>
-  <p class="split">My business partner sourced sites, ran planning with our consultant, and handled pricing, agents and conveyancing. We appraised every site together.</p>
+  <div class="story">
+    <div class="stage" aria-hidden="true">
+      <span class="stage-n" id="stage-n">01 / 05</span>
+      <div class="layer on" data-ch="0"><div class="hatch">Photo to come<br>Studio flat, before and after</div></div>
+      <div class="layer" data-ch="1"><div class="hatch">Photos to come<br>Client refurbishments and loft conversions</div></div>
+      <div class="layer ba" data-ch="2"><img src="img/selkirk49-1.jpg" alt=""><div class="before"><div class="hatch">Before photo to come</div></div><span class="lab l">Before</span><span class="lab r">After</span><div class="bar"></div><input type="range" min="0" max="100" value="38" aria-label="Before and after, 49 Selkirk Road"><span class="cap">49 Selkirk Road · house to four flats</span></div>
+      <div class="layer" data-ch="2"><img src="img/smallwood-0.jpg" alt="" loading="lazy"><span class="cap">15 Smallwood Road</span></div>
+      <div class="layer" data-ch="2"><img src="img/mitcham-0.jpg" alt="" loading="lazy"><span class="cap">162 Mitcham Road</span></div>
+      <div class="layer" data-ch="2"><img src="img/selkirk58-0.jpg" alt="" loading="lazy"><span class="cap">58 Selkirk Road</span></div>
+      <div class="layer" data-ch="3"><img src="img/trinity-0.jpg" alt="" loading="lazy"><span class="cap">28 Trinity Road</span></div>
+      <div class="layer ba" data-ch="3"><img src="img/aldrington-1.jpg" alt="" loading="lazy"><div class="before"><div class="hatch">Before photo to come</div></div><span class="lab l">Before</span><span class="lab r">After</span><div class="bar"></div><input type="range" min="0" max="100" value="38" aria-label="Before and after, 4 Aldrington Road"><span class="cap">4 Aldrington Road · house to seven flats</span></div>
+      <div class="layer" data-ch="4"><img src="img/deburgh-0.jpg" alt="" loading="lazy"><span class="cap">1 Deburgh Road</span></div>
+      <div class="layer" data-ch="4"><img src="img/lrr-0.jpg" alt="" loading="lazy"><span class="cap">129 Lower Richmond Road</span></div>
+    </div>
+    <div class="chapters">
+      <article class="ch on">
+        <span class="k">01 · The first flat</span>
+        <h3>An HVAC engineer with a studio flat to refurbish</h3>
+        <p>I was working as an HVAC engineer in London when my brothers and I bought a studio flat to refurbish. They wanted to invest in the UK. I wanted to build something with my own hands.</p>
+        <p class="proof">When it was finished I left my job and went into construction full time.</p>
+      </article>
+      <article class="ch">
+        <span class="k">02 · Builder for hire</span>
+        <h3>Running other people's builds</h3>
+        <p>Next I ran a small construction business as a freelance project manager and white-label contractor: refurbishments, extensions and loft conversions for private clients.</p>
+        <p class="list">Radipole Road · Weiss Road · Hydethorpe Road · Ebner Road · Cedars Road · East Hill</p>
+      </article>
+      <article class="ch">
+        <span class="k">03 · Developing with a partner</span>
+        <h3>Four developments alongside a developer ten years ahead of us</h3>
+        <p>With my co-founder Mark Baracas, Nutbrook moved into development. We did our first four schemes as a joint venture with Handy Heroes, who had ten years of development experience.</p>
+        <p class="proof">20 units across four developments, three of them with basement excavations.</p>
+        <p class="list">49 Selkirk Road · 15 Smallwood Road · 162 Mitcham Road · 58 Selkirk Road</p>
+      </article>
+      <article class="ch">
+        <span class="k">04 · On our own</span>
+        <h3>Finding the sites, raising the finance, delivering the flats</h3>
+        <p>The next four developments were Nutbrook's alone. We found the sites, raised the finance and brought 23 more flats to market.</p>
+        <p class="proof">Over <mark class="tbc">£2m · TBC</mark> of private investor funding returned without default.</p>
+        <p class="list">28 Trinity Road · 4 Aldrington Road · 1 Deburgh Road · 129 Lower Richmond Road</p>
+      </article>
+      <article class="ch">
+        <span class="k">05 · Our own construction team</span>
+        <h3>Developer and contractor on the same scheme</h3>
+        <p>For the last two developments I built an in-house construction team. I hired a foreman and a project manager, and we ran everything ourselves, from procurement to site labour.</p>
+        <p class="proof">Over £2.5m of development cost, excluding land, delivered under Nutbrook Construction.</p>
+      </article>
+    </div>
+  </div>
 </section>
 
-<section class="sec" aria-labelledby="h-proj">
-  <div class="sec-h">
-    <span class="eyebrow">Selected schemes</span>
-    <h2 id="h-proj">Eight London Schemes</h2>
+<section class="sec" aria-labelledby="h-role">
+  <div class="sec-h rv">
+    <span class="eyebrow">What I bring</span>
+    <h2 id="h-role">I have run a development as the client and as the contractor</h2>
+    <p>I know how to run a new-build development from the ground up, because I have done each part of it myself.</p>
   </div>
-  <div class="projects">
-    <article class="proj lead">    
+  <div class="gets">
+    <div class="get rv"><span class="big">£2.5m+<small>Build cost, excluding land</small></span><h3>I built and ran the construction team</h3><p>On Deburgh Road and Lower Richmond Road, Nutbrook was its own main contractor. I hired the foreman and project manager and ran procurement, subcontractors and site labour in-house.</p></div>
+    <div class="get rv"><span class="big">8<small>London developments as principal agent</small></span><h3>I coordinated every professional</h3><p>Architects, structural, energy and HVAC engineers, surveyors and interior designers reported to me. I took each scheme from planning drawings to a full design pack, discharged planning conditions and led Building Control inspections.</p></div>
+    <div class="get rv"><span class="big"><mark class="tbc">£2m · TBC</mark><small>Investor funding returned without default</small></span><h3>I managed the lender and the cash</h3><p>I prepared senior-lender drawdowns, hosted the monitoring surveyor and made every contractor and staff payment.</p></div>
+    <div class="get rv"><span class="big">43<small>Flats specified, fitted and staged</small></span><h3>I led interiors and procurement</h3><p>I led the interior design packages, drew lighting and electrical layouts, ordered all second-fix and furnished the homes for sale.</p></div>
+  </div>
+  <p class="split rv">My co-founder Mark Baracas sourced sites, ran planning with our consultant, and handled pricing, agents and conveyancing. We appraised every site together.</p>
+</section>
+
+<section class="sec" aria-labelledby="h-feat">
+  <div class="sec-h rv">
+    <span class="eyebrow">Feature projects</span>
+    <h2 id="h-feat">Three schemes that show the range</h2>
+  </div>
+  <div class="feats">
+    <article class="proj rv">
       <div class="ph ph4"><img src="img/deburgh-0.jpg" alt="1 Deburgh Road, corner block and street"><img src="img/deburgh-1.jpg" alt="1 Deburgh Road, open-plan living"><img src="img/deburgh-2.jpg" alt="1 Deburgh Road, kitchen"><img src="img/deburgh-3.jpg" alt="1 Deburgh Road, bedroom"></div>
       <div class="pbody">
-        <div class="ptitle"><h3>1 Deburgh Road</h3><span class="tag">New build</span></div>
-        <p class="pdesc">Eight new-build flats in three three-storey blocks, Wimbledon SW19. Delivered with in-house construction management.</p>
+        <div class="ptitle"><h3><span class="fno">01</span>1 Deburgh Road</h3><span class="tag">New build · in-house construction</span></div>
+        <p class="pwhy">Our largest scheme, and the first we built ourselves. Nutbrook was developer and main contractor, with our own foreman, project manager and site labour.</p>
+        <p class="pdesc">Eight new-build flats in three three-storey blocks, Wimbledon SW19.</p>
         <dl class="tb"><div><dt>Location</dt><dd>London SW19</dd></div><div><dt>Units</dt><dd>8</dd></div><div><dt>GDV</dt><dd>£4.80m</dd></div><div><dt>Completed</dt><dd>Feb 2026</dd></div></dl>
       </div>
     </article>
-    <article class="proj">    
+    <article class="proj rv">
       <div class="ph"><img src="img/aldrington-0.jpg" alt="4 Aldrington Road, open-plan living"><img src="img/aldrington-1.jpg" alt="4 Aldrington Road, brick exterior"><img src="img/aldrington-2.jpg" alt="4 Aldrington Road, kitchen"></div>
       <div class="pbody">
-        <div class="ptitle"><h3>4 Aldrington Road</h3><span class="tag">New build</span></div>
-        <p class="pdesc">Demolition of a detached house and construction of seven new-build flats.</p>
+        <div class="ptitle"><h3><span class="fno">02</span>4 Aldrington Road</h3><span class="tag">New build</span></div>
+        <p class="pwhy">A ground-up scheme delivered without a JV partner: a detached house demolished and replaced with seven flats.</p>
+        <p class="pdesc">Demolition and construction of seven new-build flats, Streatham SW16.</p>
         <dl class="tb"><div><dt>Location</dt><dd>London SW16</dd></div><div><dt>Units</dt><dd>7</dd></div><div><dt>GDV</dt><dd>£3.61m</dd></div><div><dt>Completed</dt><dd>May 2025</dd></div></dl>
       </div>
     </article>
-    <article class="proj">    
-      <div class="ph"><img src="img/selkirk58-0.jpg" alt="58 Selkirk Road, living space under rooflight"><img src="img/selkirk58-1.jpg" alt="58 Selkirk Road, street elevation"><img src="img/selkirk58-2.jpg" alt="58 Selkirk Road, rear garden"></div>
-      <div class="pbody">
-        <div class="ptitle"><h3>58 Selkirk Road</h3><span class="tag">New build + basement</span></div>
-        <p class="pdesc">Five new-build flats including a full basement excavation.</p>
-        <dl class="tb"><div><dt>Location</dt><dd>London SW17</dd></div><div><dt>Units</dt><dd>5</dd></div><div><dt>GDV</dt><dd>£2.80m</dd></div><div><dt>Completed</dt><dd>Mar 2024</dd></div></dl>
-      </div>
-    </article>
-    <article class="proj">    
-      <div class="ph"><img src="img/selkirk49-0.jpg" alt="49 Selkirk Road, top-floor living"><img src="img/selkirk49-1.jpg" alt="49 Selkirk Road, street elevation"><img src="img/selkirk49-2.jpg" alt="49 Selkirk Road, dining"></div>
-      <div class="pbody">
-        <div class="ptitle"><h3>49 Selkirk Road</h3><span class="tag">Conversion + basement</span></div>
-        <p class="pdesc">Terraced house converted into four flats, including a basement excavation.</p>
-        <dl class="tb"><div><dt>Location</dt><dd>London SW17</dd></div><div><dt>Units</dt><dd>4</dd></div><div><dt>GDV</dt><dd>£2.38m</dd></div><div><dt>Completed</dt><dd>May 2023</dd></div></dl>
-      </div>
-    </article>
-    <article class="proj">    
-      <div class="ph"><img src="img/smallwood-0.jpg" alt="15 Smallwood Road, living and dining"><img src="img/smallwood-1.jpg" alt="15 Smallwood Road, roof terrace"><img src="img/smallwood-2.jpg" alt="15 Smallwood Road, kitchen"></div>
-      <div class="pbody">
-        <div class="ptitle"><h3>15 Smallwood Road</h3><span class="tag">New build + basement</span></div>
-        <p class="pdesc">Five new-build flats including a half-basement excavation.</p>
-        <dl class="tb"><div><dt>Location</dt><dd>London SW17</dd></div><div><dt>Units</dt><dd>5</dd></div><div><dt>GDV</dt><dd>£2.81m</dd></div><div><dt>Completed</dt><dd>May 2023</dd></div></dl>
-      </div>
-    </article>
-    <article class="proj third">    
-      <div class="ph"><img src="img/trinity-0.jpg" alt="28 Trinity Road, open-plan living"><img src="img/trinity-1.jpg" alt="28 Trinity Road, courtyard"><img src="img/trinity-2.jpg" alt="28 Trinity Road, bedroom"></div>
-      <div class="pbody">
-        <div class="ptitle"><h3>28 Trinity Road</h3><span class="tag">Mixed-use conversion</span></div>
-        <p class="pdesc">Commercial unit and two flats reconfigured into a commercial unit and three flats.</p>
-        <dl class="tb"><div><dt>Location</dt><dd>London SW17</dd></div><div><dt>Units</dt><dd>4</dd></div><div><dt>GDV</dt><dd>£1.75m</dd></div><div><dt>Completed</dt><dd>Feb 2025</dd></div></dl>
-      </div>
-    </article>
-    <article class="proj third">    
-      <div class="ph"><img src="img/lrr-0.jpg" alt="129 Lower Richmond Road, street elevation"><img src="img/lrr-1.jpg" alt="129 Lower Richmond Road, living room"><img src="img/lrr-2.jpg" alt="129 Lower Richmond Road, kitchen"></div>
-      <div class="pbody">
-        <div class="ptitle"><h3>129 Lower Richmond Road</h3><span class="tag">Conversion</span></div>
-        <p class="pdesc">Conversion into four flats. Delivered with in-house construction management.</p>
-        <dl class="tb"><div><dt>Location</dt><dd>London SW15</dd></div><div><dt>Units</dt><dd>4</dd></div><div><dt>GDV</dt><dd>£2.30m</dd></div><div><dt>Completed</dt><dd>Jun 2026</dd></div></dl>
-      </div>
-    </article>
-    <article class="proj third">    
-      <div class="ph"><img src="img/mitcham-0.jpg" alt="162 Mitcham Road, corner elevation and shopfront"><img src="img/mitcham-1.jpg" alt="162 Mitcham Road, side elevation with mansard"><img src="img/mitcham-2.jpg" alt="162 Mitcham Road, side street frontage"></div>
-      <div class="pbody">
-        <div class="ptitle"><h3>162 Mitcham Road</h3><span class="tag">Mixed-use conversion</span></div>
-        <p class="pdesc">High-street corner building: uppers converted into five flats with a two-storey rear extension, and the ground-floor commercial unit retained and refurbished.</p>
-        <dl class="tb"><div><dt>Location</dt><dd>London SW17</dd></div><div><dt>Units</dt><dd>6</dd></div><div><dt>GDV</dt><dd>£2.71m</dd></div><div><dt>Completed</dt><dd>May 2023</dd></div></dl>
-      </div>
-    </article>
-  </div>
-</section>
-
-<section class="sec" aria-labelledby="h-cpt">
-  <div class="sec-h">
-    <h2 id="h-cpt">One Cape Town Scheme</h2>
-  </div>
-  <div class="projects">
-    <article class="proj lead">    
+    <article class="proj rv">
       <div class="ph ph4"><img src="img/palmyra-0.jpg" alt="Palmyra, front elevation and courtyard"><img src="img/palmyra-1.jpg" alt="Palmyra, open-plan living and kitchen"><img src="img/palmyra-2.jpg" alt="Palmyra, roof terrace facing Devil's Peak"><img src="img/palmyra-3.jpg" alt="Palmyra, shower room"></div>
       <div class="pbody">
-        <div class="ptitle"><h3>Palmyra</h3><span class="tag">Cape Town</span></div>
-        <p class="pdesc">Four new-build homes in Newlands, Cape Town. A 36-month project, extended by Covid delays between purchase and construction.</p>
+        <div class="ptitle"><h3><span class="fno">03</span>Palmyra</h3><span class="tag">New build · Cape Town</span></div>
+        <p class="pwhy">A Nutbrook development in South Africa: four new homes in Newlands, Cape Town.</p>
+        <p class="pdesc">A 36-month project, extended by Covid delays between purchase and construction.</p>
         <dl class="tb"><div><dt>Location</dt><dd>Newlands</dd></div><div><dt>Units</dt><dd>4</dd></div><div><dt>GDV</dt><dd>R26m</dd></div><div><dt>Completed</dt><dd>Jun 2024</dd></div></dl>
       </div>
     </article>
   </div>
 </section>
 
-<section class="sec" aria-labelledby="h-rec">
-  <div class="sec-h">
-    <span class="eyebrow">Full track record</span>
-    <h2 id="h-rec">All projects, 2019–2026</h2>
-    <p>Every project completed, newest first, including the schemes above.</p>
+<section class="sec" aria-labelledby="h-more">
+  <div class="sec-row rv">
+    <div class="sec-h">
+      <span class="eyebrow">More schemes</span>
+      <h2 id="h-more">Six more London developments</h2>
+    </div>
+    <div class="car-nav"><button class="nbtn" type="button" id="car-prev" aria-label="Previous scheme">←</button><button class="nbtn" type="button" id="car-next" aria-label="Next scheme">→</button></div>
   </div>
-  <div class="rec" role="table" aria-label="All projects">
+  <div class="car" id="car" tabindex="0" aria-label="More schemes, scroll sideways">
+    <article class="card"><img loading="lazy" src="img/selkirk58-0.jpg" alt="58 Selkirk Road, living space under rooflight"><div class="pbody"><div class="ptitle"><h3>58 Selkirk Road</h3><span class="tag">New build + basement</span></div><p class="pdesc">Five new-build flats including a full basement excavation.</p><dl class="tb"><div><dt>Location</dt><dd>London SW17</dd></div><div><dt>Units</dt><dd>5</dd></div><div><dt>GDV</dt><dd>£2.80m</dd></div><div><dt>Completed</dt><dd>Mar 2024</dd></div></dl></div></article>
+    <article class="card"><img loading="lazy" src="img/selkirk49-0.jpg" alt="49 Selkirk Road, top-floor living"><div class="pbody"><div class="ptitle"><h3>49 Selkirk Road</h3><span class="tag">Conversion + basement</span></div><p class="pdesc">Terraced house converted into four flats, including a basement excavation.</p><dl class="tb"><div><dt>Location</dt><dd>London SW17</dd></div><div><dt>Units</dt><dd>4</dd></div><div><dt>GDV</dt><dd>£2.38m</dd></div><div><dt>Completed</dt><dd>May 2023</dd></div></dl></div></article>
+    <article class="card"><img loading="lazy" src="img/smallwood-0.jpg" alt="15 Smallwood Road, living and dining"><div class="pbody"><div class="ptitle"><h3>15 Smallwood Road</h3><span class="tag">New build + basement</span></div><p class="pdesc">Five new-build flats including a half-basement excavation.</p><dl class="tb"><div><dt>Location</dt><dd>London SW17</dd></div><div><dt>Units</dt><dd>5</dd></div><div><dt>GDV</dt><dd>£2.81m</dd></div><div><dt>Completed</dt><dd>May 2023</dd></div></dl></div></article>
+    <article class="card"><img loading="lazy" src="img/trinity-0.jpg" alt="28 Trinity Road, open-plan living"><div class="pbody"><div class="ptitle"><h3>28 Trinity Road</h3><span class="tag">Mixed-use conversion</span></div><p class="pdesc">Commercial unit and two flats reconfigured into a commercial unit and three flats.</p><dl class="tb"><div><dt>Location</dt><dd>London SW17</dd></div><div><dt>Units</dt><dd>4</dd></div><div><dt>GDV</dt><dd>£1.75m</dd></div><div><dt>Completed</dt><dd>Feb 2025</dd></div></dl></div></article>
+    <article class="card"><img loading="lazy" src="img/lrr-0.jpg" alt="129 Lower Richmond Road, street elevation"><div class="pbody"><div class="ptitle"><h3>129 Lower Richmond Road</h3><span class="tag">Conversion</span></div><p class="pdesc">Conversion into four flats. Delivered with in-house construction management.</p><dl class="tb"><div><dt>Location</dt><dd>London SW15</dd></div><div><dt>Units</dt><dd>4</dd></div><div><dt>GDV</dt><dd>£2.30m</dd></div><div><dt>Completed</dt><dd>Jun 2026</dd></div></dl></div></article>
+    <article class="card"><img loading="lazy" src="img/mitcham-0.jpg" alt="162 Mitcham Road, corner elevation and shopfront"><div class="pbody"><div class="ptitle"><h3>162 Mitcham Road</h3><span class="tag">Mixed-use conversion</span></div><p class="pdesc">High-street corner building: uppers converted into five flats with a two-storey rear extension, and the ground-floor commercial unit retained and refurbished.</p><dl class="tb"><div><dt>Location</dt><dd>London SW17</dd></div><div><dt>Units</dt><dd>6</dd></div><div><dt>GDV</dt><dd>£2.71m</dd></div><div><dt>Completed</dt><dd>May 2023</dd></div></dl></div></article>
+  </div>
+</section>
+
+<section class="sec" aria-labelledby="h-rec">
+  <div class="sec-h rv">
+    <span class="eyebrow">Full track record</span>
+    <h2 id="h-rec">All 23 projects, 2019–2026</h2>
+    <p>Newest first, including the schemes above.</p>
+  </div>
+  <div class="filters" role="group" aria-label="Filter by type">
+    <button class="fbtn" type="button" data-f="" aria-pressed="true">All · 23</button>
+    <button class="fbtn" type="button" data-f="New build" aria-pressed="false">New build · 5</button>
+    <button class="fbtn" type="button" data-f="Conversion" aria-pressed="false">Conversion · 10</button>
+    <button class="fbtn" type="button" data-f="Client" aria-pressed="false">Client · 4</button>
+    <button class="fbtn" type="button" data-f="Investment" aria-pressed="false">Investment · 4</button>
+  </div>
+  <div class="rec" id="rec" role="table" aria-label="All projects">
     <div class="row hd" role="row"><span role="columnheader" class="no">#</span><span role="columnheader">Project</span><span role="columnheader" class="r gdv">GDV</span><span role="columnheader" class="yr">Year completed</span><span role="columnheader" class="ty">Type</span></div>
-    <div class="row" role="row"><span class="no" role="cell">1</span><span role="cell"><span class="nm">1 Deburgh Road, London SW19</span><span class="sc">8 new-build flats in three blocks</span></span><span class="num r gdv" role="cell">£4.80m</span><span class="num yr" role="cell">2026</span><span class="ty" role="cell">New build</span></div>
-    <div class="row" role="row"><span class="no" role="cell">2</span><span role="cell"><span class="nm">129 Lower Richmond Road, London SW15</span><span class="sc">Conversion into 4 flats</span></span><span class="num r gdv" role="cell">£2.30m</span><span class="num yr" role="cell">2026</span><span class="ty" role="cell">Conversion</span></div>
-    <div class="row" role="row"><span class="no" role="cell">3</span><span role="cell"><span class="nm">29 Wynell Road, London SE23</span><span class="sc">Planning consent for 7 new-build flats; site sold with consent</span></span><span class="num r gdv" role="cell">£1.20m</span><span class="num yr" role="cell">2026</span><span class="ty" role="cell">Investment</span></div>
-    <div class="row" role="row"><span class="no" role="cell">4</span><span role="cell"><span class="nm">4 Aldrington Road, London SW16</span><span class="sc">Detached house demolished; 7 new-build flats</span></span><span class="num r gdv" role="cell">£3.60m</span><span class="num yr" role="cell">2025</span><span class="ty" role="cell">New build</span></div>
-    <div class="row" role="row"><span class="no" role="cell">5</span><span role="cell"><span class="nm">28 Trinity Road, London SW17</span><span class="sc">Commercial + 2 flats reconfigured to commercial + 3 flats</span></span><span class="num r gdv" role="cell">£1.75m</span><span class="num yr" role="cell">2025</span><span class="ty" role="cell">Conversion</span></div>
-    <div class="row" role="row"><span class="no" role="cell">6</span><span role="cell"><span class="nm">2 Ebner Road, London</span><span class="sc">Ground-floor side and rear extension, internal refurbishment</span></span><span class="num r gdv" role="cell">£1.20m</span><span class="num yr" role="cell">2025</span><span class="ty" role="cell">Client</span></div>
-    <div class="row" role="row"><span class="no" role="cell">7</span><span role="cell"><span class="nm">58 Selkirk Road, London SW17</span><span class="sc">5 new-build flats with full basement excavation</span></span><span class="num r gdv" role="cell">£2.79m</span><span class="num yr" role="cell">2024</span><span class="ty" role="cell">New build</span></div>
-    <div class="row" role="row"><span class="no" role="cell">8</span><span role="cell"><span class="nm">Palmyra, Newlands, Cape Town</span><span class="sc">4 new-build homes</span></span><span class="num r gdv" role="cell">R26m</span><span class="num yr" role="cell">2024</span><span class="ty" role="cell">New build</span></div>
-    <div class="row" role="row"><span class="no" role="cell">9</span><span role="cell"><span class="nm">15 Smallwood Road, London SW17</span><span class="sc">5 new-build flats with half-basement excavation</span></span><span class="num r gdv" role="cell">£2.81m</span><span class="num yr" role="cell">2023</span><span class="ty" role="cell">New build</span></div>
-    <div class="row" role="row"><span class="no" role="cell">10</span><span role="cell"><span class="nm">162 Mitcham Road, London SW17</span><span class="sc">Corner uppers to 5 flats with rear extension; commercial unit refurbished</span></span><span class="num r gdv" role="cell">£2.71m</span><span class="num yr" role="cell">2023</span><span class="ty" role="cell">Conversion</span></div>
-    <div class="row" role="row"><span class="no" role="cell">11</span><span role="cell"><span class="nm">49 Selkirk Road, London SW17</span><span class="sc">Terraced house to 4 flats with basement excavation</span></span><span class="num r gdv" role="cell">£2.38m</span><span class="num yr" role="cell">2023</span><span class="ty" role="cell">Conversion</span></div>
-    <div class="row" role="row"><span class="no" role="cell">12</span><span role="cell"><span class="nm">49 Hydethorpe Road, London</span><span class="sc">Flat refurbishment, loft conversion with rear extension</span></span><span class="num r gdv" role="cell">£0.78m</span><span class="num yr" role="cell">2022</span><span class="ty" role="cell">Client</span></div>
-    <div class="row" role="row"><span class="no" role="cell">13</span><span role="cell"><span class="nm">89 Cedars Road, Clapham</span><span class="sc">3-bed flat reconfigured to 4-bed, 2-bath; retained as buy-to-let</span></span><span class="num r gdv" role="cell">£0.62m</span><span class="num yr" role="cell">2022</span><span class="ty" role="cell">Conversion</span></div>
-    <div class="row" role="row"><span class="no" role="cell">14</span><span role="cell"><span class="nm">Old Mill Inn, Maryport, Cumbria</span><span class="sc">Country pub redeveloped with 5 en-suite rooms; consent for a 3-bed house</span></span><span class="num r gdv" role="cell">£0.60m</span><span class="num yr" role="cell">2022</span><span class="ty" role="cell">Conversion</span></div>
-    <div class="row" role="row"><span class="no" role="cell">15</span><span role="cell"><span class="nm">Highland Drove, Cumbria</span><span class="sc">Off-market country pub bought below market value; tenanted</span></span><span class="num r gdv" role="cell">£0.40m</span><span class="num yr" role="cell">2022</span><span class="ty" role="cell">Investment</span></div>
-    <div class="row" role="row"><span class="no" role="cell">16</span><span role="cell"><span class="nm">Cross Keys, Cumbria</span><span class="sc">Off-market country pub bought below market value; tenanted</span></span><span class="num r gdv" role="cell">£0.40m</span><span class="num yr" role="cell">2022</span><span class="ty" role="cell">Investment</span></div>
-    <div class="row" role="row"><span class="no" role="cell">17</span><span role="cell"><span class="nm">Tithe Barn Hotel, Cockermouth</span><span class="sc">Derelict pub with uppers redeveloped into a 9-bed boutique hotel and basement bar</span></span><span class="num r gdv" role="cell">£0.65m</span><span class="num yr" role="cell">2021</span><span class="ty" role="cell">Conversion</span></div>
-    <div class="row" role="row"><span class="no" role="cell">18</span><span role="cell"><span class="nm">89 Beckett Road, Doncaster</span><span class="sc">5-bed terrace converted to 6-bed HMO; sold tenanted</span></span><span class="num r gdv" role="cell">£0.24m</span><span class="num yr" role="cell">2021</span><span class="ty" role="cell">Conversion</span></div>
-    <div class="row" role="row"><span class="no" role="cell">19</span><span role="cell"><span class="nm">23 Radipole Road, London SW6</span><span class="sc">3-bed, 3-bath flat refurbishment with rear loft extension and ridge raise</span></span><span class="num r gdv" role="cell">£1.35m</span><span class="num yr" role="cell">2020</span><span class="ty" role="cell">Client</span></div>
-    <div class="row" role="row"><span class="no" role="cell">20</span><span role="cell"><span class="nm">42 Lingwell Road, Tooting</span><span class="sc">3-bed house extended to 5-bed, 3-bath: loft, side and rear extensions</span></span><span class="num r gdv" role="cell">£1.25m</span><span class="num yr" role="cell">2020</span><span class="ty" role="cell">Conversion</span></div>
-    <div class="row" role="row"><span class="no" role="cell">21</span><span role="cell"><span class="nm">16 Weiss Road, Putney</span><span class="sc">Rear loft extension and full internal refurbishment</span></span><span class="num r gdv" role="cell">£0.81m</span><span class="num yr" role="cell">2020</span><span class="ty" role="cell">Client</span></div>
-    <div class="row" role="row"><span class="no" role="cell">22</span><span role="cell"><span class="nm">4–14 Victoria Place, Carlisle</span><span class="sc">Six terraced offices: consent for 6 × 10-bed student HMOs; sold with planning</span></span><span class="num r gdv" role="cell">£0.75m</span><span class="num yr" role="cell">2019</span><span class="ty" role="cell">Investment</span></div>
-    <div class="row" role="row"><span class="no" role="cell">23</span><span role="cell"><span class="nm">8 Firle Place, Earlsfield</span><span class="sc">Basement flat refurbished to split-level 1-bed; retained as buy-to-let</span></span><span class="num r gdv" role="cell">£0.25m</span><span class="num yr" role="cell">2019</span><span class="ty" role="cell">Conversion</span></div>
+    <div class="row" role="row" data-t="New build"><span class="no" role="cell">1</span><span role="cell"><span class="nm">1 Deburgh Road, London SW19</span><span class="sc">8 new-build flats in three blocks</span></span><span class="num r gdv" role="cell">£4.80m</span><span class="num yr" role="cell">2026</span><span class="ty" role="cell">New build</span></div>
+    <div class="row" role="row" data-t="Conversion"><span class="no" role="cell">2</span><span role="cell"><span class="nm">129 Lower Richmond Road, London SW15</span><span class="sc">Conversion into 4 flats</span></span><span class="num r gdv" role="cell">£2.30m</span><span class="num yr" role="cell">2026</span><span class="ty" role="cell">Conversion</span></div>
+    <div class="row" role="row" data-t="Investment"><span class="no" role="cell">3</span><span role="cell"><span class="nm">29 Wynell Road, London SE23</span><span class="sc">Planning consent for 7 new-build flats; site sold with consent</span></span><span class="num r gdv" role="cell">£1.20m</span><span class="num yr" role="cell">2026</span><span class="ty" role="cell">Investment</span></div>
+    <div class="row" role="row" data-t="New build"><span class="no" role="cell">4</span><span role="cell"><span class="nm">4 Aldrington Road, London SW16</span><span class="sc">Detached house demolished; 7 new-build flats</span></span><span class="num r gdv" role="cell">£3.60m</span><span class="num yr" role="cell">2025</span><span class="ty" role="cell">New build</span></div>
+    <div class="row" role="row" data-t="Conversion"><span class="no" role="cell">5</span><span role="cell"><span class="nm">28 Trinity Road, London SW17</span><span class="sc">Commercial + 2 flats reconfigured to commercial + 3 flats</span></span><span class="num r gdv" role="cell">£1.75m</span><span class="num yr" role="cell">2025</span><span class="ty" role="cell">Conversion</span></div>
+    <div class="row" role="row" data-t="Client"><span class="no" role="cell">6</span><span role="cell"><span class="nm">2 Ebner Road, London</span><span class="sc">Ground-floor side and rear extension, internal refurbishment</span></span><span class="num r gdv" role="cell">£1.20m</span><span class="num yr" role="cell">2025</span><span class="ty" role="cell">Client</span></div>
+    <div class="row" role="row" data-t="New build"><span class="no" role="cell">7</span><span role="cell"><span class="nm">58 Selkirk Road, London SW17</span><span class="sc">5 new-build flats with full basement excavation</span></span><span class="num r gdv" role="cell">£2.79m</span><span class="num yr" role="cell">2024</span><span class="ty" role="cell">New build</span></div>
+    <div class="row" role="row" data-t="New build"><span class="no" role="cell">8</span><span role="cell"><span class="nm">Palmyra, Newlands, Cape Town</span><span class="sc">4 new-build homes</span></span><span class="num r gdv" role="cell">R26m</span><span class="num yr" role="cell">2024</span><span class="ty" role="cell">New build</span></div>
+    <div class="row" role="row" data-t="New build"><span class="no" role="cell">9</span><span role="cell"><span class="nm">15 Smallwood Road, London SW17</span><span class="sc">5 new-build flats with half-basement excavation</span></span><span class="num r gdv" role="cell">£2.81m</span><span class="num yr" role="cell">2023</span><span class="ty" role="cell">New build</span></div>
+    <div class="row" role="row" data-t="Conversion"><span class="no" role="cell">10</span><span role="cell"><span class="nm">162 Mitcham Road, London SW17</span><span class="sc">Corner uppers to 5 flats with rear extension; commercial unit refurbished</span></span><span class="num r gdv" role="cell">£2.71m</span><span class="num yr" role="cell">2023</span><span class="ty" role="cell">Conversion</span></div>
+    <div class="row more" role="row" data-t="Conversion"><span class="no" role="cell">11</span><span role="cell"><span class="nm">49 Selkirk Road, London SW17</span><span class="sc">Terraced house to 4 flats with basement excavation</span></span><span class="num r gdv" role="cell">£2.38m</span><span class="num yr" role="cell">2023</span><span class="ty" role="cell">Conversion</span></div>
+    <div class="row more" role="row" data-t="Client"><span class="no" role="cell">12</span><span role="cell"><span class="nm">49 Hydethorpe Road, London</span><span class="sc">Flat refurbishment, loft conversion with rear extension</span></span><span class="num r gdv" role="cell">£0.78m</span><span class="num yr" role="cell">2022</span><span class="ty" role="cell">Client</span></div>
+    <div class="row more" role="row" data-t="Conversion"><span class="no" role="cell">13</span><span role="cell"><span class="nm">89 Cedars Road, Clapham</span><span class="sc">3-bed flat reconfigured to 4-bed, 2-bath; retained as buy-to-let</span></span><span class="num r gdv" role="cell">£0.62m</span><span class="num yr" role="cell">2022</span><span class="ty" role="cell">Conversion</span></div>
+    <div class="row more" role="row" data-t="Conversion"><span class="no" role="cell">14</span><span role="cell"><span class="nm">Old Mill Inn, Maryport, Cumbria</span><span class="sc">Country pub redeveloped with 5 en-suite rooms; consent for a 3-bed house</span></span><span class="num r gdv" role="cell">£0.60m</span><span class="num yr" role="cell">2022</span><span class="ty" role="cell">Conversion</span></div>
+    <div class="row more" role="row" data-t="Investment"><span class="no" role="cell">15</span><span role="cell"><span class="nm">Highland Drove, Cumbria</span><span class="sc">Off-market country pub bought below market value; tenanted</span></span><span class="num r gdv" role="cell">£0.40m</span><span class="num yr" role="cell">2022</span><span class="ty" role="cell">Investment</span></div>
+    <div class="row more" role="row" data-t="Investment"><span class="no" role="cell">16</span><span role="cell"><span class="nm">Cross Keys, Cumbria</span><span class="sc">Off-market country pub bought below market value; tenanted</span></span><span class="num r gdv" role="cell">£0.40m</span><span class="num yr" role="cell">2022</span><span class="ty" role="cell">Investment</span></div>
+    <div class="row more" role="row" data-t="Conversion"><span class="no" role="cell">17</span><span role="cell"><span class="nm">Tithe Barn Hotel, Cockermouth</span><span class="sc">Derelict pub with uppers redeveloped into a 9-bed boutique hotel and basement bar</span></span><span class="num r gdv" role="cell">£0.65m</span><span class="num yr" role="cell">2021</span><span class="ty" role="cell">Conversion</span></div>
+    <div class="row more" role="row" data-t="Conversion"><span class="no" role="cell">18</span><span role="cell"><span class="nm">89 Beckett Road, Doncaster</span><span class="sc">5-bed terrace converted to 6-bed HMO; sold tenanted</span></span><span class="num r gdv" role="cell">£0.24m</span><span class="num yr" role="cell">2021</span><span class="ty" role="cell">Conversion</span></div>
+    <div class="row more" role="row" data-t="Client"><span class="no" role="cell">19</span><span role="cell"><span class="nm">23 Radipole Road, London SW6</span><span class="sc">3-bed, 3-bath flat refurbishment with rear loft extension and ridge raise</span></span><span class="num r gdv" role="cell">£1.35m</span><span class="num yr" role="cell">2020</span><span class="ty" role="cell">Client</span></div>
+    <div class="row more" role="row" data-t="Conversion"><span class="no" role="cell">20</span><span role="cell"><span class="nm">42 Lingwell Road, Tooting</span><span class="sc">3-bed house extended to 5-bed, 3-bath: loft, side and rear extensions</span></span><span class="num r gdv" role="cell">£1.25m</span><span class="num yr" role="cell">2020</span><span class="ty" role="cell">Conversion</span></div>
+    <div class="row more" role="row" data-t="Client"><span class="no" role="cell">21</span><span role="cell"><span class="nm">16 Weiss Road, Putney</span><span class="sc">Rear loft extension and full internal refurbishment</span></span><span class="num r gdv" role="cell">£0.81m</span><span class="num yr" role="cell">2020</span><span class="ty" role="cell">Client</span></div>
+    <div class="row more" role="row" data-t="Investment"><span class="no" role="cell">22</span><span role="cell"><span class="nm">4–14 Victoria Place, Carlisle</span><span class="sc">Six terraced offices: consent for 6 × 10-bed student HMOs; sold with planning</span></span><span class="num r gdv" role="cell">£0.75m</span><span class="num yr" role="cell">2019</span><span class="ty" role="cell">Investment</span></div>
+    <div class="row more" role="row" data-t="Conversion"><span class="no" role="cell">23</span><span role="cell"><span class="nm">8 Firle Place, Earlsfield</span><span class="sc">Basement flat refurbished to split-level 1-bed; retained as buy-to-let</span></span><span class="num r gdv" role="cell">£0.25m</span><span class="num yr" role="cell">2019</span><span class="ty" role="cell">Conversion</span></div>
     <div class="row tot" role="row"><span class="no" role="cell">23</span><span role="cell">Projects completed, 2019–2026</span><span class="num r gdv" role="cell">£33.65m<span class="sc">+ R26m</span></span><span class="yr" role="cell"></span><span class="ty" role="cell"></span></div>
   </div>
+  <button class="more-btn" type="button" id="more-btn" aria-expanded="false">Show all 23 projects</button>
 </section>
 
 <section class="sec" aria-labelledby="h-edu">
@@ -356,14 +436,65 @@ a{color:var(--accent)}
 
 </div>
 <script>
-document.querySelectorAll('[data-copy]').forEach(function(b){
-  b.addEventListener('click',function(){
-    var t=b.getAttribute('data-copy'),done=function(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy'},1600)};
-    try{navigator.clipboard.writeText(t).then(done,function(){sel(b)})}catch(e){sel(b)}
-  });
-});
+(function(){
+var $=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
+/* copy buttons */
 function sel(b){var a=b.previousElementSibling,r=document.createRange();r.selectNodeContents(a);var s=getSelection();s.removeAllRanges();s.addRange(r)}
-</script>
+$('[data-copy]').forEach(function(b){b.addEventListener('click',function(){
+  var t=b.getAttribute('data-copy'),done=function(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy'},1600)};
+  try{navigator.clipboard.writeText(t).then(done,function(){sel(b)})}catch(e){sel(b)}
+})});
 
+/* story: the chapter crossing the reading line picks the photo; scroll within a chapter steps through its photos */
+var chs=$('.ch'),layers=$('.layer'),counter=document.getElementById('stage-n'),groups=chs.map(function(_,i){return layers.filter(function(l){return +l.dataset.ch===i})});
+var tick=false;
+function story(){
+  tick=false;
+  var line=innerHeight*(matchMedia('(max-width:760px)').matches?.72:.5),act=0,p=0;
+  chs.forEach(function(c,i){var r=c.getBoundingClientRect();if(r.top<=line){act=i;p=Math.max(0,Math.min(.999,(line-r.top)/r.height))}});
+  var g=groups[act],show=g[Math.floor(p*g.length)];
+  layers.forEach(function(l){l.classList.toggle('on',l===show)});
+  chs.forEach(function(c,i){c.classList.toggle('on',i===act)});
+  counter.textContent=('0'+(act+1)).slice(-2)+' / '+('0'+chs.length).slice(-2);
+}
+function req(){if(!tick){tick=true;requestAnimationFrame(story)}}
+addEventListener('scroll',req,{passive:true});addEventListener('resize',req);story();
+$('.ba input').forEach(function(i){i.addEventListener('input',function(){i.parentNode.style.setProperty('--p',i.value+'%')})});
+
+/* feature galleries: tap a small photo to bring it to the front */
+$('.ph').forEach(function(ph){ph.addEventListener('click',function(e){
+  var t=e.target,m=ph.querySelector('img');if(t.tagName!=='IMG'||t===m)return;
+  var s=m.src,a=m.alt;m.src=t.src;m.alt=t.alt;t.src=s;t.alt=a;
+})});
+
+/* carousel */
+var car=document.getElementById('car'),prev=document.getElementById('car-prev'),next=document.getElementById('car-next');
+function step(){var c=car.querySelector('.card');return c.getBoundingClientRect().width+24}
+function nav(){prev.disabled=car.scrollLeft<4;next.disabled=car.scrollLeft>car.scrollWidth-car.clientWidth-4}
+prev.addEventListener('click',function(){car.scrollBy({left:-step()})});
+next.addEventListener('click',function(){car.scrollBy({left:step()})});
+car.addEventListener('scroll',nav,{passive:true});addEventListener('resize',nav);nav();
+
+/* track record: first ten, then expand; filters show every match */
+var rec=document.getElementById('rec'),more=document.getElementById('more-btn'),rows=$('.row[data-t]',rec);
+more.addEventListener('click',function(){
+  var o=rec.classList.toggle('open');more.setAttribute('aria-expanded',o);more.textContent=o?'Show fewer':'Show all 23 projects';
+  if(!o)document.getElementById('h-rec').scrollIntoView({block:'start'});
+});
+$('.fbtn').forEach(function(b){b.addEventListener('click',function(){
+  var f=b.dataset.f;
+  $('.fbtn').forEach(function(x){x.setAttribute('aria-pressed',x===b)});
+  rows.forEach(function(r){r.hidden=!!f&&r.dataset.t!==f});
+  rec.classList.toggle('filtered',!!f);more.hidden=!!f;
+})});
+
+/* reveal on scroll */
+var rv=$('.rv');
+if('IntersectionObserver' in window){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+  rv.forEach(function(el){io.observe(el)});
+}else rv.forEach(function(el){el.classList.add('in')});
+})();
+</script>
 </body>
 </html>
